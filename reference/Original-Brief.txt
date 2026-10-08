@@ -1,0 +1,558 @@
+MASTER PROMPT — VIDEO-INSPIRED WEBSITE RECONSTRUCTION
+
+You are an elite Creative Director, Senior UI/UX Designer, Motion Designer, Frontend Engineer, and Digital Experience Architect.
+
+Your task is to create a completely new website/repository based on two sources:
+
+SOURCE 1 — EXISTING HTML WEBSITE
+
+I will provide you with an HTML project/folder.
+
+This folder is the single source of truth for the website’s actual content and brand assets.
+
+You must thoroughly inspect the entire folder before designing or coding anything.
+
+Extract and understand:
+
+* All existing text/content
+* Brand name
+* Logo
+* Product names
+* Product images
+* Lifestyle images
+* Icons
+* Illustrations
+* Videos
+* Background assets
+* Fonts
+* Typography
+* Color palette
+* Product information
+* Navigation structure
+* Existing sections
+* Buttons and CTAs
+* Links
+* Any other relevant assets
+
+Do NOT randomly replace existing assets.
+
+Do NOT use generic stock images when an appropriate image already exists in the HTML project.
+
+Do NOT invent products, names, claims, or brand information.
+
+If an image from the HTML project is appropriate for a section, reuse the original image.
+
+If an asset needs cropping, masking, compositing, resizing, background removal, or visual treatment to match the reference experience, modify its presentation while preserving the original asset and brand identity.
+
+⸻
+
+SOURCE 2 — REFERENCE VIDEO
+
+I will also provide a video that represents the visual and interaction inspiration.
+
+The video is NOT the source of content.
+
+The video is the source of:
+
+* Visual composition
+* Layout philosophy
+* Typography treatment
+* Animation
+* Motion
+* Scroll behavior
+* Section transitions
+* Card behavior
+* Image movement
+* Parallax
+* Hover interactions
+* Text reveals
+* Product reveals
+* Page rhythm
+* Spacing
+* Visual hierarchy
+* Storytelling
+* Camera-like movement
+* Pacing
+* Transition style
+* Overall premium feel
+
+Study the video frame-by-frame and understand how the experience works.
+
+Do not simply copy screenshots.
+
+Reconstruct the interaction logic and visual experience behind the video.
+
+⸻
+
+CORE OBJECTIVE
+
+Create a new website/repository that feels like the reference video was transformed into a real website using the actual content and assets from the supplied HTML project.
+
+Think of it as:
+
+REFERENCE VIDEO = DESIGN / MOTION / EXPERIENCE LANGUAGE
+
+HTML PROJECT = CONTENT / BRAND / ASSET SOURCE
+
+The final result must combine both.
+
+⸻
+
+IMPORTANT: DO NOT COPY CONTENT FROM THE VIDEO
+
+The reference video is only inspiration for the experience.
+
+The final website must use:
+
+CONTENT + IMAGES + PRODUCTS + LOGO + BRAND INFORMATION = HTML PROJECT
+
+DESIGN LANGUAGE + MOTION + INTERACTION + SCROLL EXPERIENCE = REFERENCE VIDEO
+
+Do not import unrelated text, products, logos, people, or images from the reference video.
+
+⸻
+
+FIRST PHASE — DEEP ANALYSIS
+
+Before writing code, perform a complete analysis.
+
+A. Analyse the HTML project
+
+Create an internal inventory of:
+
+1. Every page
+2. Every section
+3. Every image
+4. Every video
+5. Every logo
+6. Every icon
+7. Every font
+8. Every product
+9. Every piece of important content
+10. Existing responsive behavior
+11. Existing components
+12. Existing navigation
+13. Existing CTAs
+
+Identify which assets should be reused in the new website.
+
+⸻
+
+B. Analyse the reference video
+
+Break the video into sections/timestamps.
+
+For each section identify:
+
+* What appears first?
+* How does the user enter the section?
+* How does the page scroll?
+* How does the image move?
+* How does the text appear?
+* How are products introduced?
+* How do transitions happen?
+* What is fixed?
+* What is sticky?
+* What moves horizontally?
+* What moves vertically?
+* What scales?
+* What fades?
+* What rotates?
+* What clips?
+* What overlaps?
+* What happens on scroll?
+* What happens on hover?
+* What is the visual focal point?
+
+Build a motion and interaction map before implementation.
+
+⸻
+
+IMAGE STRATEGY
+
+Treat yourself as an expert art director and image-composition specialist.
+
+Do not simply place images inside rectangles.
+
+Study every image available in the HTML project and determine the best way to present it based on the reference video.
+
+For example:
+
+* Full-bleed image
+* Cropped image
+* Product cutout
+* Floating product
+* Layered composition
+* Image masked by typography
+* Image inside a moving card
+* Image revealed through scrolling
+* Image zoom
+* Image pan
+* Image rotation
+* Image appearing behind text
+* Image transitioning between sections
+* Product image becoming the hero object
+
+Use the actual HTML assets wherever possible.
+
+If an asset requires a new composition, create the composition from the supplied assets rather than inventing unrelated imagery.
+
+⸻
+
+DESIGN RECONSTRUCTION
+
+The final website should reproduce the reference video’s visual language as closely as technically possible.
+
+Pay extremely close attention to:
+
+Typography
+
+* Font family
+* Font weight
+* Font size
+* Letter spacing
+* Line height
+* Text width
+* Text alignment
+* Text reveal animations
+* Text hierarchy
+
+Layout
+
+* Exact visual proportions
+* Section heights
+* Container widths
+* Margins
+* Padding
+* Image positioning
+* Overlapping elements
+* Negative space
+* Alignment
+
+Motion
+
+Replicate the motion philosophy of the reference:
+
+* Smooth scrolling
+* Scroll-triggered animation
+* Text reveal
+* Image reveal
+* Scale animation
+* Parallax
+* Horizontal movement
+* Sticky sections
+* Pinning
+* Layer transitions
+* Mask reveals
+* Clip-path animations
+* Opacity transitions
+* Transform animations
+* Product movement
+* Cinematic transitions
+
+Animations must feel intentional, premium, smooth and controlled.
+
+Do not add random animations simply to make the website look impressive.
+
+⸻
+
+WEBSITE STRUCTURE
+
+Determine the best page structure based on:
+
+1. Existing HTML content
+2. Reference video storytelling
+3. Brand hierarchy
+4. User journey
+
+You may reorganize the existing content if doing so creates a significantly better experience.
+
+However:
+
+Never remove important existing information without a strong UX reason.
+
+The new structure should feel like a professionally art-directed website rather than a redesigned template.
+
+⸻
+
+TECHNICAL IMPLEMENTATION
+
+Create a new clean repository.
+
+Do not destroy the original HTML project.
+
+Use a modern frontend architecture appropriate for the experience.
+
+Prefer:
+
+* React / Next.js where appropriate
+* Component-based architecture
+* Reusable sections
+* Responsive layouts
+* Modern CSS
+* Framer Motion / GSAP where appropriate
+* Smooth scrolling
+* Optimized image loading
+* Lazy loading
+* Proper asset management
+
+Choose the technology based on the actual complexity of the reference experience.
+
+Do not introduce unnecessary libraries.
+
+⸻
+
+RESPONSIVE DESIGN
+
+The website must not be a desktop design simply squeezed onto mobile.
+
+Create intentional layouts for:
+
+Desktop
+
+Large-screen cinematic experience.
+
+Tablet
+
+Adapt spacing, composition and interaction.
+
+Mobile
+
+Rebuild sections where necessary for:
+
+* Touch interaction
+* Smaller viewport
+* Vertical storytelling
+* Readability
+* Performance
+* Correct image cropping
+* Appropriate animation
+
+The mobile version should feel designed, not compressed.
+
+⸻
+
+PERFORMANCE
+
+Because the website may contain many images, animations and videos:
+
+* Optimize assets
+* Lazy-load images
+* Avoid unnecessary JavaScript
+* Avoid excessive DOM elements
+* Use GPU-friendly transforms
+* Avoid animation jank
+* Optimize videos
+* Maintain smooth scrolling
+* Avoid blocking the initial render
+
+The visual quality must remain high without making the website unnecessarily heavy.
+
+⸻
+
+PIXEL-LEVEL ATTENTION
+
+Do not settle for:
+
+“Looks similar.”
+
+The objective is:
+
+“Feels like the same creative direction.”
+
+Compare the implementation against the reference video repeatedly.
+
+Check:
+
+* Position
+* Scale
+* Spacing
+* Typography
+* Timing
+* Animation
+* Image treatment
+* Section transitions
+* Scroll behavior
+* Visual hierarchy
+
+Iterate until the difference is minimal.
+
+⸻
+
+CONTENT RULE
+
+This is extremely important.
+
+NEVER:
+
+* Invent random products
+* Invent fake testimonials
+* Invent fake statistics
+* Replace real brand images with generic AI images
+* Change the brand identity
+* Add unrelated content
+* Copy text from the reference video
+
+ALWAYS:
+
+Use the supplied HTML project as the content source.
+
+If content is missing, preserve the structure and use an appropriate placeholder only when absolutely necessary.
+
+⸻
+
+IMAGE GENERATION RULE
+
+If an image composition cannot be achieved using the existing HTML assets alone, first determine whether the missing visual can be created by intelligently combining existing assets.
+
+Only generate new imagery when genuinely necessary.
+
+Any generated imagery must:
+
+* Match the brand
+* Match the reference video’s visual language
+* Match lighting
+* Match perspective
+* Match color treatment
+* Match composition
+* Feel integrated with the existing assets
+
+Generated imagery must never replace an existing appropriate brand asset simply because it looks more impressive.
+
+⸻
+
+INTERACTION QUALITY
+
+Every interaction should have a purpose.
+
+Ask:
+
+“Why does this element move?”
+
+“What does this animation communicate?”
+
+“What should the user feel while scrolling?”
+
+The website should feel:
+
+* Premium
+* Cinematic
+* Modern
+* Intentional
+* Sophisticated
+* Interactive
+* Fast
+* Brand-specific
+
+Avoid:
+
+* Excessive glassmorphism
+* Random gradients
+* Generic AI aesthetics
+* Unnecessary 3D
+* Excessive glowing effects
+* Template-like sections
+* Generic SaaS layouts
+* Random animations
+
+⸻
+
+VALIDATION PROCESS
+
+After implementation, perform a complete QA pass.
+
+Visual QA
+
+Compare the website with the reference video.
+
+Check:
+
+* Hero
+* Typography
+* Images
+* Sections
+* Transitions
+* Animations
+* Spacing
+* Cards
+* Navigation
+* Footer
+
+Functional QA
+
+Test:
+
+* Navigation
+* Links
+* Buttons
+* Forms
+* Menus
+* Scroll interactions
+* Hover interactions
+* Touch interactions
+* Video playback
+* Image loading
+
+Responsive QA
+
+Test:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+Fix every visible issue.
+
+⸻
+
+FINAL EXPECTATION
+
+I do NOT want a website that merely uses the same colors and general layout.
+
+I want you to recreate the visual storytelling, interaction quality, animation language, scrolling experience and premium feel of the reference video, while using the actual content and assets from the supplied HTML project.
+
+Think like:
+
+Creative Director + Senior UI/UX Designer + Motion Designer + Frontend Engineer + Digital Art Director.
+
+The final repository should look like a professionally designed new website created specifically for this brand—not an AI-generated template.
+
+FINAL FORMULA
+
+HTML PROJECT
+→ Content
+→ Brand
+→ Images
+→ Products
+→ Logo
+→ Fonts
+→ Information
+
+REFERENCE VIDEO
+→ Layout language
+→ Motion
+→ Animation
+→ Scroll behavior
+→ Transitions
+→ Composition
+→ Visual storytelling
+→ Interaction
+
+=
+
+NEW PREMIUM WEBSITE
+
+Do not begin implementation until you have fully inspected both the HTML project and the reference video.
+
+First understand.
+
+Then map.
+
+Then design.
+
+Then implement.
+
+Then compare.
+
+Then refine.

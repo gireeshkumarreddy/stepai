@@ -1,0 +1,11 @@
+{
+  "name": "steps-ai-motion-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Steps AI — source-grounded, card-led cinematic website",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "render": "python3 scripts/render.py"
+  }
+}
