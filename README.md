@@ -12,6 +12,15 @@ python3 -m http.server 8080 --directory dist
 
 Open `http://localhost:8080`. ES modules require an HTTP server; opening `index.html` with `file://` is not supported.
 
+## Deploy
+
+`dist/` is the finished site: static files with no build step, and every path relative, so it works on a domain root or under a sub-path.
+
+- **GitHub Pages:** in the repo, go to Settings → Pages and set Source to "GitHub Actions". After that, every push to `main` runs `.github/workflows/deploy-pages.yml`, which checks the site and publishes `dist/`.
+- **Vercel:** import the repo. `vercel.json` points it at `dist/`.
+- **Netlify:** import the repo. `netlify.toml` publishes `dist/`.
+- **Any other static host:** upload the contents of `dist/`.
+
 ## Project structure
 
 - `dist/index.html`: accessible, semantic page structure.
