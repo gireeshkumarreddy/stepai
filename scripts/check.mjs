@@ -11,6 +11,7 @@ const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
 assert.equal(ids.length, new Set(ids).size, 'IDs must be unique');
 for (const [, target] of html.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.includes(target), `Missing anchor ${target}`);
 for (const [, asset] of html.matchAll(/(?:src|href)="((?:assets\/|app\.js|styles\.css)[^"]*)"/g)) assert.ok(fs.existsSync(path.join(dist, asset)), `Missing asset: ${asset}`);
+for (const [, file] of html.matchAll(/rel="(?:modulepreload|preload|stylesheet)" href="([^"]+)"/g)) assert.ok(fs.existsSync(path.join(dist, file)), `Missing preloaded file: ${file}`);
 for (const [, asset] of fs.readFileSync(path.join(dist, 'styles.css'), 'utf8').matchAll(/url\(['"]?([^)'"\s]+)['"]?\)/g)) assert.ok(fs.existsSync(path.join(dist, asset)), `Missing CSS asset: ${asset}`);
 const liveFiles = fs.readdirSync(path.join(dist, 'live')).map(name => `live/${name}`);
 for (const file of ['app.js', 'motion.js', ...liveFiles]) {

@@ -56,6 +56,9 @@ export function initMotion() {
   const openingButton = q('#intro-replay');
   let frame = 0, lastTime = 0, metrics = null, targetY = scrollY, currentY = scrollY;
   let openingStart = performance.now(), openingDone = scrollY > 100, openingAnimations = [];
+  // live.css reveals the hero on its own 3.2s after load if the scripts are slow; arriving
+  // after that, don't replay the intro over a page that's already showing.
+  const arrivedLate = performance.now() > 3200;
   let revealed = new WeakSet(), observer;
   let sections = [];
   const top = el => el.getBoundingClientRect().top + scrollY;
@@ -97,9 +100,9 @@ export function initMotion() {
     all('.reveal,.industry-card').forEach(el => observer.observe(el));
   }
 
-  function playOpening() {
+  function playOpening(initial = false) {
     openingAnimations.forEach(a => a.cancel()); openingAnimations = [];
-    openingDone = reduced() || scrollY > 100;
+    openingDone = reduced() || scrollY > 100 || (initial && arrivedLate);
     openingStart = performance.now();
     all('.hero-copy .line>span').forEach((el, i) => {
       if (openingDone) { el.style.transform = 'none'; return; }
@@ -114,7 +117,7 @@ export function initMotion() {
     openingButton.setAttribute('aria-pressed', 'false');
     requestTick();
   }
-  openingButton.addEventListener('click', playOpening);
+  openingButton.addEventListener('click', () => playOpening());
 
   function measure() {
     const h = stage.offsetHeight, w = stage.clientWidth;
@@ -226,7 +229,13 @@ export function initMotion() {
   document.addEventListener('visibilitychange', () => { if (!document.hidden) {lastTime = 0; readScroll();} });
   prepareText();
   body.classList.add('motion-ready');
-  applyReduction(); playOpening();
+  applyReduction(); playOpening(true);
+  if (!arrivedLate) body.classList.add('hero-intro');
+  else {
+    // Glide the cards from the fallback layout into place instead of jumping.
+    body.classList.add('hero-settling');
+    setTimeout(() => body.classList.remove('hero-settling'), 1000);
+  }
   if ('ResizeObserver' in window) new ResizeObserver(measure).observe(q('main'));
   document.fonts.ready.then(measure);
   return {reduced};

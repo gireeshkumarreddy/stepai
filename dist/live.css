@@ -25,6 +25,22 @@
 @keyframes megaIn { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
 @keyframes shine { from { transform: translateX(-120%) } to { transform: translateX(220%) } }
 
+/* ---------- 0. First paint ---------------------------------------------- */
+/* Until the scripts start the intro, show only its first frame (the opening line),
+   so the two headlines never overlap. If the scripts are slow, the hero reveals
+   itself at 3.2s and motion.js skips its intro instead of replaying it. */
+@keyframes openingOut { to { opacity: 0; transform: translateY(-35px) } }
+@media (prefers-reduced-motion: no-preference) {
+  html.js body:not(.motion-ready) .hero-copy .line>span { transform: translateY(115%); animation: lineUp 1.1s var(--ease) 3.2s both !important }
+  html.js body:not(.motion-ready) .hero-copy .line:nth-child(2)>span { animation-delay: 3.3s !important }
+  html.js body:not(.motion-ready) .hero-copy .line:nth-child(3)>span { animation-delay: 3.4s !important }
+  html.js body:not(.motion-ready) .hero-enter { opacity: 0; animation: fadeUp .9s var(--ease) 3.5s both !important }
+  html.js body:not(.motion-ready) .hero-deck { opacity: 0; animation: fadeIn .8s ease 3.4s both }
+  html.js body:not(.motion-ready) .hero-opening { animation: openingOut .6s ease 3s both }
+}
+.hero-intro:not(.reduce-motion) .hero-deck { animation: fadeIn .6s ease both }
+.hero-settling .hero-card { transition: transform 1s var(--ease) !important }
+
 /* ---------- 1. Colour flood -------------------------------------------- */
 /* The brand blue from the hero's "support." Headings stay navy; supporting text,
    lines and blue accents shift so they keep their contrast on the blue. */
